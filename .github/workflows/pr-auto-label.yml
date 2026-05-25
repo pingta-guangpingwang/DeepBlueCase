@@ -1,0 +1,96 @@
+name: PR Auto Label
+
+on:
+  pull_request:
+    types: [opened, edited, synchronize, reopened]
+
+jobs:
+  label:
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Auto-label by changed paths
+        uses: actions/labeler@v5
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          sync-labels: true
+          configuration-path: .github/labeler.yml
+
+      - name: Auto-label by frontmatter metadata
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const path = require('path');
+
+            // Get list of changed README.md files in this PR
+            const { execSync } = require('child_process');
+            const diffOutput = execSync(
+              'git diff --name-only origin/${{ github.base_ref }}...HEAD -- "*/README.md" "_TEMPLATE.md"',
+              { encoding: 'utf-8' }
+            ).trim();
+
+            if (!diffOutput) {
+              console.log('No template/case files changed. Skipping frontmatter labeling.');
+              return;
+            }
+
+            const changedFiles = diffOutput.split('\n').filter(Boolean);
+            const labelsToAdd = new Set();
+
+            for (const file of changedFiles) {
+              try {
+                const content = fs.readFileSync(file, 'utf-8');
+                const fmMatch = content.match(/^---\n([\s\S]*?)\n---/);
+                if (!fmMatch) continue;
+
+                const frontmatter = fmMatch[1];
+
+                // Extract type: template or case
+                const typeMatch = frontmatter.match(/^type:\s*(.+)$/m);
+                if (typeMatch) {
+                  const type = typeMatch[1].trim();
+                  labelsToAdd.add(`type:${type}`);
+                }
+
+                // Extract category
+                const catMatch = frontmatter.match(/^category:\s*(.+)$/m);
+                if (catMatch) {
+                  const category = catMatch[1].trim();
+                  labelsToAdd.add(`cat:${category}`);
+                }
+
+                // Extract tech stack items
+                const stackMatch = frontmatter.match(/^tech_stack:\s*\[(.+)\]$/m);
+                if (stackMatch) {
+                  const items = stackMatch[1]
+                    .split(',')
+                    .map(s => s.trim())
+                    .filter(s => s.length > 0);
+                  for (const item of items) {
+                    labelsToAdd.add(`tech:${item.toLowerCase()}`);
+                  }
+                }
+              } catch (err) {
+                console.warn(`Could not process ${file}: ${err.message}`);
+              }
+            }
+
+            if (labelsToAdd.size === 0) {
+              console.log('No frontmatter labels to add.');
+              return;
+            }
+
+            const labelsArray = [...labelsToAdd];
+            console.log('Adding labels:', labelsArray);
+
+            await github.rest.issues.addLabels({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              labels: labelsArray,
+            });

@@ -1,0 +1,160 @@
+{
+  "updated": "2026-05-25T04:35:34Z",
+  "items": [
+    {
+      "id": "case-dashboard-001",
+      "name": "Dashboard Analytics Platform",
+      "type": "case",
+      "category": "data-visualization",
+      "tech_stack": [
+        "React",
+        "TypeScript",
+        "D3.js",
+        "Recharts",
+        "Ant Design",
+        "Zustand"
+      ],
+      "style_tags": [
+        "dashboard",
+        "analytics",
+        "charts",
+        "data-visualization",
+        "real-time",
+        "dark-mode"
+      ],
+      "score": 9,
+      "source_url": "https://github.com/apache/superset",
+      "summary": "Apache Superset is an enterprise-grade data exploration and visualization platform. A masterclass in building complex, interactive dashboards at scale.",
+      "file": "cases/dashboard-analytics/README.md"
+    },
+    {
+      "id": "case-ecommerce-001",
+      "name": "Ecommerce Platform",
+      "type": "case",
+      "category": "ecommerce",
+      "tech_stack": [
+        "Next.js",
+        "TypeScript",
+        "Prisma",
+        "Stripe",
+        "Tailwind CSS",
+        "PostgreSQL",
+        "tRPC"
+      ],
+      "style_tags": [
+        "fullstack",
+        "ecommerce",
+        "SSR",
+        "serverless",
+        "payment",
+        "headless-commerce"
+      ],
+      "score": 9,
+      "source_url": "https://github.com/medusajs/nextjs-starter-medusa",
+      "summary": "Medusa.js is an open-source headless commerce platform. This case study covers the official Next.js storefront — a complete production ecommerce reference with product pages, cart, checkout, and Stripe payments.",
+      "file": "cases/ecommerce-platform/README.md"
+    },
+    {
+      "id": "template-admin-001",
+      "name": "React Vite Admin",
+      "type": "template",
+      "category": "admin-panel",
+      "tech_stack": [
+        "React",
+        "Vite",
+        "TypeScript",
+        "Ant Design",
+        "Redux Toolkit",
+        "React Router"
+      ],
+      "style_tags": [
+        "SPA",
+        "dark-mode",
+        "responsive",
+        "i18n",
+        "RBAC",
+        "dashboard"
+      ],
+      "score": 9,
+      "source_url": "https://github.com/ant-design/ant-design-pro",
+      "summary": "Production-ready enterprise admin dashboard scaffold built with React, Vite, and Ant Design. Provides layout, auth, routing, and theming out of the box.",
+      "file": "templates/react-vite-admin/README.md"
+    },
+    {
+      "id": "case-form-001",
+      "name": "Form Builder Tool",
+      "type": "case",
+      "category": "low-code-tool",
+      "tech_stack": [
+        "React",
+        "TypeScript",
+        "Formily",
+        "Ant Design",
+        "JSON Schema",
+        "Zustand"
+      ],
+      "style_tags": [
+        "form-builder",
+        "low-code",
+        "drag-and-drop",
+        "schema-driven",
+        "dynamic-form"
+      ],
+      "score": 8,
+      "source_url": "https://github.com/alibaba/formily",
+      "summary": "Alibaba Formily is a form solution for complex scenarios. This case study covers its form builder (designable) — a drag-and-drop form designer with JSON Schema output, ideal reference for any low-code UI builder.",
+      "file": "cases/form-builder-tool/README.md"
+    },
+    {
+      "id": "template-mall-001",
+      "name": "Vue3 H5 Mall",
+      "type": "template",
+      "category": "ecommerce",
+      "tech_stack": [
+        "Vue 3",
+        "Vite",
+        "TypeScript",
+        "Vant UI",
+        "Pinia",
+        "Vue Router"
+      ],
+      "style_tags": [
+        "H5",
+        "mobile-first",
+        "responsive",
+        "ecommerce",
+        "shopping",
+        "mini-program"
+      ],
+      "score": 8,
+      "source_url": "https://github.com/jdf2e/nutui",
+      "summary": "A complete H5 mobile mall template built with Vue 3, Vite, and Vant UI. Includes product listing, cart, checkout, and user center modules.",
+      "file": "templates/vue3-h5-mall/README.md"
+    },
+    {
+      "id": "template-mini-001",
+      "name": "UniApp Mini Tool",
+      "type": "template",
+      "category": "mobile-app",
+      "tech_stack": [
+        "UniApp",
+        "Vue 3",
+        "uView UI",
+        "SCSS",
+        "WeChat Mini-Program",
+        "H5"
+      ],
+      "style_tags": [
+        "cross-platform",
+        "mini-program",
+        "H5",
+        "toolkit",
+        "mobile"
+      ],
+      "score": 7,
+      "source_url": "https://github.com/YanxinNet/uView",
+      "summary": "Cross-platform UniApp scaffold with uView UI library. Build once and deploy to WeChat mini-programs, H5, iOS, and Android from a single codebase.",
+      "file": "templates/uniapp-mini-tool/README.md"
+    }
+  ]
+}
