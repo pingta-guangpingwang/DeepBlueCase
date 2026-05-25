@@ -1,81 +1,91 @@
-# Template Case Store
+# DeepBlueCase · 深蓝案例坊
 
-A curated repository of open-source project templates and real-world case studies, designed as reference material for AI-assisted software development.
+深蓝工坊生态 — 开源项目模板与生产级案例参考库。为 AI 辅助开发提供高质量的项目架构参考，每个条目包含真实的 GitHub 源地址、YAML 结构化元数据和实践要点分析。
 
-## Purpose
+## 为什么需要它
 
-When generating code with AI, having high-quality reference projects dramatically improves output accuracy and architecture quality. This repository organizes two types of references:
+AI 生成代码时，有高质量参考项目可大幅提升架构准确度和代码质量。本仓库收录两类参考资源：
 
-- **Templates** — Directly reusable project scaffolds. Use these as starting points when bootstrapping a new project.
-- **Cases** — Complete production projects. Study these for architecture patterns, component design, and best practices.
+- **模板（Templates）** — 可直接使用的项目脚手架，启动新项目时的起点
+- **案例（Cases）** — 完整的生产项目，用于学习架构模式、组件设计和最佳实践
 
-## Repository Structure
+## 使用方式
+
+### 面向 AI 开发
+1. 浏览 `templates/` 或 `cases/` 找到匹配你需求的项目
+2. 将 YAML Frontmatter 复制粘贴到 AI 对话中作为上下文
+3. AI 会根据源仓库的代码和模式生成高质量结果
+
+### 面向开发者
+1. **Clone 源仓库** 深入研究完整代码
+2. **阅读 README** 了解项目亮点和架构决策
+3. **组合多个参考** — 用模板搭建框架 + 用案例指导细节
+
+## 目录结构
 
 ```
-template-case-store/
-├── README.md              # This file
-├── _TEMPLATE.md           # Contribution template for new entries
-├── templates/             # Reusable project scaffolds
-│   ├── react-vite-admin/
-│   ├── vue3-h5-mall/
-│   └── uniapp-mini-tool/
-├── cases/                 # Reference production projects
-│   ├── dashboard-analytics/
-│   ├── ecommerce-platform/
-│   └── form-builder-tool/
-└── .github/workflows/     # CI automation
+DeepBlueCase/
+├── README.md
+├── _TEMPLATE.md               ← 贡献模板
+├── manifest.json               ← 完整索引
+├── manifest.ai.json            ← AI 精简索引
+├── templates/                  ← 可直接使用的项目脚手架
+│   ├── react-vite-admin/       ← React + Vite + Ant Design 后台模板
+│   ├── vue3-h5-mall/           ← Vue3 + Vant H5 移动商城模板
+│   └── uniapp-mini-tool/       ← UniApp 跨平台小程序模板
+├── cases/                      ← 生产级参考案例
+│   ├── dashboard-analytics/    ← Apache Superset — 数据可视化平台
+│   ├── ecommerce-platform/     ← Medusa.js — 无头电商平台
+│   └── form-builder-tool/      ← Alibaba Formily — 表单搭建器
+└── .github/workflows/          ← CI 自动化
 ```
 
-## Metadata Format
-
-Every entry follows a standard YAML frontmatter format at the top of its README.md:
+## 文件格式规范
 
 ```yaml
 ---
+id: case-xxx-001
+name: 项目名称
 type: template | case
-category: <project-category>
-tech_stack: [list, of, technologies]
-style_tags: [keywords, for, searching]
-use_cases: [when, to, use, this]
-score: 1-10
-source_url: <real-github-repo-url>
-summary: <one-line description>
+category: 分类
+tech_stack: [Next.js, TypeScript, Prisma]
+style_tags: [fullstack, ecommerce]
+use_cases: [场景1, 场景2]
+score: 9
+source_url: https://github.com/real/repo
+summary: 一句话描述项目亮点
 ---
+
+# 项目名称
+
+## 概述
+...
+
+## 架构亮点
+...
+
+## 为什么值得参考
+...
 ```
 
-## How to Use
+## 当前种子资源
 
-### As an AI reference
+| 名称 | 类型 | 技术栈 | 评分 |
+|------|------|--------|------|
+| React Vite Admin | 模板 | React, Vite, Ant Design, Redux | 9 |
+| Vue3 H5 Mall | 模板 | Vue 3, Vite, Vant, Pinia | 8 |
+| UniApp Mini Tool | 模板 | UniApp, Vue 3, uView | 7 |
+| Dashboard Analytics | 案例 | React, D3.js, Recharts, Ant Design | 9 |
+| Ecommerce Platform | 案例 | Next.js, Prisma, Stripe, tRPC | 9 |
+| Form Builder Tool | 案例 | React, Formily, JSON Schema | 8 |
 
-1. **Browse** the templates or cases folders to find a project matching your needs.
-2. **Copy the YAML frontmatter** and paste it into your AI prompt as context.
-3. **Include the source URL** so the AI can reference the real repository's code and patterns.
+## 贡献指南
 
-### As a developer
-
-1. **Clone the referenced source repository** to study the full codebase.
-2. **Use the README** to understand what makes the project valuable.
-3. **Combine multiple references** — mix a template with a case study for best results.
-
-## Contribution Guide
-
-1. Pick a real, popular, well-maintained open-source project from GitHub.
-2. Copy `_TEMPLATE.md` to the appropriate directory (`templates/` or `cases/`).
-3. Fill in all frontmatter fields with accurate information.
-4. Write a clear README describing the project highlights, architecture, and how to use it as a reference.
-5. Open a PR — the CI workflow will auto-label it by category.
-
-## Current Entries
-
-| Name | Type | Tech Stack | Score |
-|------|------|------------|-------|
-| react-vite-admin | template | React, Vite, Ant Design | 9 |
-| vue3-h5-mall | template | Vue 3, Vant, Pinia | 8 |
-| uniapp-mini-tool | template | UniApp, uView | 7 |
-| dashboard-analytics | case | React, D3, Recharts | 9 |
-| ecommerce-platform | case | Next.js, Prisma, Stripe | 9 |
-| form-builder-tool | case | React, Formily, Ant Design | 8 |
+1. 从 GitHub 挑选一个**真实、活跃、高质量**的开源项目
+2. 复制 `_TEMPLATE.md` 到对应目录（`templates/` 或 `cases/`）
+3. 填写完整的 YAML Frontmatter 和分析内容
+4. **提交 PR** → CI 自动按分类打标签 → 合并后 DeepBlueBuilder 更新索引
 
 ## License
 
-This repository itself is MIT licensed. Each referenced project retains its own license — always check the source repository before use.
+本仓库内容 MIT 协议。每个引用项目保留其原始 License，使用前请检查源仓库。
