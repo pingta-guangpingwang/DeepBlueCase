@@ -3,15 +3,32 @@ id: case-dashboard-001
 name: Dashboard Analytics Platform
 type: case
 category: data-visualization
-tech_stack: [React, TypeScript, D3.js, Recharts, Ant Design, Zustand]
-style_tags: [dashboard, analytics, charts, data-visualization, real-time, dark-mode]
-use_cases: [data-visualization, analytics-platform, monitoring-dashboard, BI-tool]
+tech_stack:
+  - React
+  - TypeScript
+  - D3.js
+  - Recharts
+  - Ant Design
+  - Zustand
+style_tags:
+  - dashboard
+  - analytics
+  - charts
+  - data-visualization
+  - real-time
+  - dark-mode
+use_cases:
+  - data-visualization
+  - analytics-platform
+  - monitoring-dashboard
+  - BI-tool
 score: 9
 source_url: https://github.com/apache/superset
-summary: >-
-  Apache Superset is an enterprise-grade data exploration and visualization
-  platform. A masterclass in building complex, interactive dashboards at scale.
+summary: Apache Superset 企业级数据探索与可视化平台，是构建复杂交互式仪表盘的大师级参考案例，覆盖 React + TypeScript + D3.js 全栈技术方案。
+summary_en: Enterprise-grade data exploration and visualization platform with interactive dashboards at scale. React + TypeScript + D3.js reference architecture.
 ---
+
+
 
 # Dashboard Analytics Platform
 

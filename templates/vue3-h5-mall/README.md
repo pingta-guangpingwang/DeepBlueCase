@@ -3,15 +3,33 @@ id: template-mall-001
 name: Vue3 H5 Mall
 type: template
 category: ecommerce
-tech_stack: [Vue 3, Vite, TypeScript, Vant UI, Pinia, Vue Router]
-style_tags: [H5, mobile-first, responsive, ecommerce, shopping, mini-program]
-use_cases: [mobile-mall, H5-store, mini-program, rapid-prototyping, ecommerce-app]
+tech_stack:
+  - Vue 3
+  - Vite
+  - TypeScript
+  - Vant UI
+  - Pinia
+  - Vue Router
+style_tags:
+  - H5
+  - mobile-first
+  - responsive
+  - ecommerce
+  - shopping
+  - mini-program
+use_cases:
+  - mobile-mall
+  - H5-store
+  - mini-program
+  - rapid-prototyping
+  - ecommerce-app
 score: 8
 source_url: https://github.com/jdf2e/nutui
-summary: >-
-  A complete H5 mobile mall template built with Vue 3, Vite, and Vant UI.
-  Includes product listing, cart, checkout, and user center modules.
+summary: 基于 Vue 3 + Vite + Vant UI 的完整 H5 移动端商城模板，包含商品列表、购物车、结算和用户中心等核心电商模块。
+summary_en: Complete H5 mobile mall with Vue 3, Vite, and Vant UI — product listing, cart, checkout, and user center modules.
 ---
+
+
 
 # Vue3 H5 Mall
 

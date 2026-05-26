@@ -3,15 +3,33 @@ id: template-admin-001
 name: React Vite Admin
 type: template
 category: admin-panel
-tech_stack: [React, Vite, TypeScript, Ant Design, Redux Toolkit, React Router]
-style_tags: [SPA, dark-mode, responsive, i18n, RBAC, dashboard]
-use_cases: [admin-panel, dashboard, internal-tools, rapid-prototyping, enterprise-app]
+tech_stack:
+  - React
+  - Vite
+  - TypeScript
+  - Ant Design
+  - Redux Toolkit
+  - React Router
+style_tags:
+  - SPA
+  - dark-mode
+  - responsive
+  - i18n
+  - RBAC
+  - dashboard
+use_cases:
+  - admin-panel
+  - dashboard
+  - internal-tools
+  - rapid-prototyping
+  - enterprise-app
 score: 9
 source_url: https://github.com/ant-design/ant-design-pro
-summary: >-
-  Production-ready enterprise admin dashboard scaffold built with React, Vite, and Ant Design.
-  Provides layout, auth, routing, and theming out of the box.
+summary: 基于 React + Vite + Ant Design 的生产级企业后台管理模板，内置认证鉴权、RBAC 权限系统和国际化方案，开箱即用。
+summary_en: Production-ready enterprise admin dashboard scaffold with React, Vite, Ant Design, auth, RBAC, and i18n built-in.
 ---
+
+
 
 # React Vite Admin
 

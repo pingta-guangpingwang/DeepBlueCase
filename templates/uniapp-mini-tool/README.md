@@ -3,15 +3,32 @@ id: template-mini-001
 name: UniApp Mini Tool
 type: template
 category: mobile-app
-tech_stack: [UniApp, Vue 3, uView UI, SCSS, WeChat Mini-Program, H5]
-style_tags: [cross-platform, mini-program, H5, toolkit, mobile]
-use_cases: [mini-program, cross-platform-app, utility-tool, rapid-prototyping, mobile-app]
+tech_stack:
+  - UniApp
+  - Vue 3
+  - uView UI
+  - SCSS
+  - WeChat Mini-Program
+  - H5
+style_tags:
+  - cross-platform
+  - mini-program
+  - H5
+  - toolkit
+  - mobile
+use_cases:
+  - mini-program
+  - cross-platform-app
+  - utility-tool
+  - rapid-prototyping
+  - mobile-app
 score: 7
 source_url: https://github.com/YanxinNet/uView
-summary: >-
-  Cross-platform UniApp scaffold with uView UI library. Build once and deploy
-  to WeChat mini-programs, H5, iOS, and Android from a single codebase.
+summary: 跨平台 UniApp 脚手架，搭载 uView UI 组件库，一套代码同时发布到微信小程序、H5、iOS 和 Android 多端平台。
+summary_en: Cross-platform UniApp scaffold — build once, deploy to WeChat mini-programs, H5, iOS, and Android with uView UI components.
 ---
+
+
 
 # UniApp Mini Tool
 

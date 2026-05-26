@@ -3,16 +3,32 @@ id: case-form-001
 name: Form Builder Tool
 type: case
 category: low-code-tool
-tech_stack: [React, TypeScript, Formily, Ant Design, JSON Schema, Zustand]
-style_tags: [form-builder, low-code, drag-and-drop, schema-driven, dynamic-form]
-use_cases: [form-builder, low-code-platform, survey-tool, workflow-designer, dynamic-form-engine]
+tech_stack:
+  - React
+  - TypeScript
+  - Formily
+  - Ant Design
+  - JSON Schema
+  - Zustand
+style_tags:
+  - form-builder
+  - low-code
+  - drag-and-drop
+  - schema-driven
+  - dynamic-form
+use_cases:
+  - form-builder
+  - low-code-platform
+  - survey-tool
+  - workflow-designer
+  - dynamic-form-engine
 score: 8
 source_url: https://github.com/alibaba/formily
-summary: >-
-  Alibaba Formily is a form solution for complex scenarios. This case study covers
-  its form builder (designable) — a drag-and-drop form designer with JSON Schema
-  output, ideal reference for any low-code UI builder.
+summary: 阿里巴巴 Formily 复杂场景表单解决方案，拖拽式表单构建器与 JSON Schema 驱动的表单渲染引擎，低代码 UI 构建器的理想参考。
+summary_en: Drag-and-drop form builder with JSON Schema output — ideal reference for low-code UI builders and dynamic form rendering engines.
 ---
+
+
 
 # Form Builder Tool
 

@@ -3,16 +3,34 @@ id: case-ecommerce-001
 name: Ecommerce Platform
 type: case
 category: ecommerce
-tech_stack: [Next.js, TypeScript, Prisma, Stripe, Tailwind CSS, PostgreSQL, tRPC]
-style_tags: [fullstack, ecommerce, SSR, serverless, payment, headless-commerce]
-use_cases: [ecommerce-platform, multi-tenant-store, marketplace, headless-commerce, fullstack-reference]
+tech_stack:
+  - Next.js
+  - TypeScript
+  - Prisma
+  - Stripe
+  - Tailwind CSS
+  - PostgreSQL
+  - tRPC
+style_tags:
+  - fullstack
+  - ecommerce
+  - SSR
+  - serverless
+  - payment
+  - headless-commerce
+use_cases:
+  - ecommerce-platform
+  - multi-tenant-store
+  - marketplace
+  - headless-commerce
+  - fullstack-reference
 score: 9
 source_url: https://github.com/medusajs/nextjs-starter-medusa
-summary: >-
-  Medusa.js is an open-source headless commerce platform. This case study covers
-  the official Next.js storefront — a complete production ecommerce reference with
-  product pages, cart, checkout, and Stripe payments.
+summary: Medusa.js 开源无头电商平台，Next.js 官方店面的完整生产级电商参考实现，包含商品展示、购物车、结账流程和 Stripe 支付集成。
+summary_en: Open-source headless commerce platform with Next.js storefront — product pages, cart, checkout, and Stripe payments integration.
 ---
+
+
 
 # Ecommerce Platform
 
